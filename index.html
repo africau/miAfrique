@@ -1,0 +1,151 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Radio LocoFM</title>
+    <!--=================================M eta tags=================================-->
+    <meta name="description" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no">
+    <!--=================================S tyle Sheets=================================-->
+   <script language="javascript" type="text/javascript" src="http://s3.reliastream.com:2199/system/streaminfo.js"></script>
+    <script language="javascript" type="text/javascript" src="http://s3.reliastream.com:2199/system/recenttracks.js"></script>
+	
+<style>
+#div1 {
+    width: 350px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+</style>
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+ </head>
+<body>  
+     <br>
+     <br>
+     <br>
+<center>
+<div>
+<canvas id ="myradio" height = "100" width = "150" draggable ="true" style="border:1px solid #d3d3d3;"></canvas>
+<canvas id ="myradiog" height = "100" width = "150"  draggable = "true" style="border:1px solid #d3d3d3;"></canvas>	
+<script>
+var e = document.getElementById("myradio");
+var c= e.getContext("2d");
+var g = c.createRadialGradient(65,50,5,90,70,100);
+ g.addColorStop(0,"red");
+ g.addColorStop(1,"white");
+			 
+ c.fillStyle = g;
+ c.fillRect(10,10,150,100);	
+ c.font="15px Georgia"
+ c.strokeText("Africa U Gospel",20,70); 
+	
+	
+var e = document.getElementById("myradiog");
+var c= e.getContext("2d");
+var g = c.createRadialGradient(65,50,5,90,70,100);
+ g.addColorStop(0,"blue");
+ g.addColorStop(1,"white");
+			 
+ c.fillStyle = g;
+ c.fillRect(10,10,150,100);	
+ c.font="15px Georgia"
+ c.strokeText("Africa U Radio",20,70); 
+ </script>	
+</div>
+	
+<div>
+<canvas id ="myradiobox" height = "200" width = "300" style="border:1px solid #d3d3d3;"></canvas>
+<script>
+var e = document.getElementById("myradiobox");
+var c= e.getContext("2d");
+var g = c.createRadialGradient(65,50,5,90,90,100);
+ g.addColorStop(0,"yellow");
+ g.addColorStop(1,"white");
+			 
+ c.fillStyle = g;
+ c.fillRect(5,5,300,400);	
+ c.font="20px Georgia"
+ c.strokeText("Radio Drop Box",20,70); 
+</script>	  
+</div>
+</center>
+    <center>
+        <style>
+         div.generic {
+             width:300px;
+             background:#43BFC7;
+             border:1px dotted black;
+             padding:8px;}
+         div.generic ul {color:red;}
+        </style>
+        <div class="generic">
+       
+        <audio controls autoplay="autoplay" ><source src="http://206.190.130.182:8094/;stream.mp3" type="audio/mp3">Your browser does not support the audio element.</audio>
+          <div class="container">
+            <div id="player-instance-radio" class="jp-jplayer"></div>
+            <div class="controls jp-controls-holder">
+              <div class="play-pause jp-play pc-play"></div>
+              <div class="play-pause jp-pause fa pc-pause" style=" display:none"></div>
+            </div>
+            <div class="jp-volume-controls">
+              <button class="sound-control pc-volume jp-mute"></button>
+              <button class="sound-control pc-mute jp-unmute"></button>
+              <div class="jp-volume-bar" style="display: none;">
+                <div class="jp-volume-bar-value" style="width: 1.4737%;"></div>
+              </div>
+            </div>
+             <div>
+                
+
+Current playlist: <span class="cc_streaminfo" data-type="playlist" data-username="frklut00"></span> <span class="cc_streaminfo" data-type="playlist" data-username="frklut00"></span><br />
+Track details: <span class="cc_streaminfo" data-type="trackartist" data-username="frklut00"></span> - <span class="cc_streaminfo" data-type="tracktitle" data-username="frklut00"></span> - <span class="cc_streaminfo" data-type="trackalbum" data-username="frklut00"></span><br />
+Raw metadata: <span class="cc_streaminfo" data-type="rawmeta" data-username="frklut00"></span><br />
+Album image:<br /><img class="cc_streaminfo" data-type="trackimageurl" data-username="frklut00" /><br /><a href="#" class="cc_streaminfo" data-type="trackbuyurl" data-username="frklut00">Buy this album</a><br />
+              </div>
+    <div class="cc_recenttracks_list" data-username="frklut00">Loading ...</div>
+    <div id="cc_tunein">
+	<a href="http://s3.reliastream.com:2199/tunein/frklut00.pls"><img align="absmiddle" src="http://s3.reliastream.com:2199/system/images/tunein-pls.png" border="0" alt="Winamp, iTunes" title="Winamp, iTunes" /></a>
+	<a href="http://s3.reliastream.com:2199/tunein/frklut00.asx"><img align="absmiddle" src="http://s3.reliastream.com:2199/system/images/tunein-asx.png" border="0" alt="Windows Media Player" title="Windows Media Player" /></a>
+	<a href="http://s3.reliastream.com:2199/tunein/frklut00.ram"><img align="absmiddle" src="http://s3.reliastream.com:2199/system/images/tunein-ram.png" border="0" alt="Real Player" title="Real Player" /></a>
+	<a href="http://s3.reliastream.com:2199/tunein/frklut00.qtl"><img align="absmiddle" src="http://s3.reliastream.com:2199/system/images/tunein-qtl.png" border="0" alt="QuickTime" title="QuickTime" /></a>
+	<a href="http://206.190.130.182/stream/frklut00.pls?mp=/media/music"><img align="absmiddle" src="http://s3.reliastream.com:2199/system/images/tunein-web.png" border="0" alt="Web Proxy" title="Web Proxy" /></a>
+</div>
+
+          
+             © 2017 Radio LocoFM
+            </div>
+        </center> 
+        </div>
+ 
+  
+    <center>
+      <div>
+        <strong></strong>
+       </div>
+    </center>
+<center>
+	 <p>Drag to change:</p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<img id="drag1" src="africauorig.png" draggable="true" ondragstart="drag(event)" width="336" height="69">
+<img id="drag1" src="africaugospel.png" draggable="true" ondragstart="drag(event)" width="336" height="69"> 
+	</center>	
+	</body></html>
+Contact GitHub API Training Shop Blog About
+© 2017 GitHub, Inc. Terms Privacy Security Statu
